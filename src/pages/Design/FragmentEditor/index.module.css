@@ -1,0 +1,404 @@
+/* ========================================
+   整体页面容器
+   ======================================== */
+.deletionContainer {
+  padding: 60px 40px 20px 40px;
+}
+
+/* ========================================
+   上部分：图文介绍区域
+   ======================================== */
+.deletionHeader {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.deletionImage img {
+  width: 45vw;
+  height: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.deletionIntro {
+  width: 40vw;
+  background-color: #f7fcfb;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.deletionIntro h1 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.deletionIntro p {
+  font-size: 1.2vw;
+  line-height: 1.3;
+  color: #333;
+  text-indent: 1em;
+  font-weight: 500;
+}
+
+.deletionIntro h2 {
+  font-size: 1.4vw;
+}
+
+.deletionIntro ul {
+  margin-left: 1em;
+  font-size: 1.1vw;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* ========================================
+   下部分：表单区域
+   ======================================== */
+.deletionForm {
+  margin: 0 40px;
+  background: #fbfafb;
+  padding: 10px 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+}
+
+.deletionForm form {
+  max-width: 100%;
+}
+
+/* ========================================
+   表单基础样式
+   ======================================== */
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.required {
+  color: #ff4d4f;
+  margin-right: 4px;
+}
+
+.helpIcon {
+  color: #1890ff;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.helpLink {
+  color: #1890ff;
+  font-size: 14px;
+  margin-left: 8px;
+  text-decoration: underline;
+}
+
+.helpLink:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   注意事项区域
+   ======================================== */
+.noteSection {
+  background-color: #f6f6f6;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 2px 10px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.noteIcon {
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.noteText {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========================================
+   示例按钮区域
+   ======================================== */
+.exampleSection {
+  margin-bottom: 24px;
+}
+
+.exampleLabel {
+  color: #1890ff;
+  font-weight: 600;
+  font-size: 16px;
+  margin-right: 16px;
+}
+
+.exampleButtons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.exampleBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.exampleBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.exampleBtn.positionBtn {
+  background-color: #b37feb;
+}
+
+.exampleBtn.positionBtn:hover {
+  background-color: #9254de;
+}
+
+.exampleBtn.SequenceBtn {
+  background-color: #36cfc9;
+}
+
+.exampleBtn.SequenceBtn:hover {
+  background-color: #13c2c2;
+}
+
+.exampleBtn.clear {
+  background-color: #ff7875;
+  margin-left: 30px;
+}
+
+.exampleBtn.clear:hover {
+  background-color: #ff4d4f;
+}
+
+/* ========================================
+   表单布局
+   ======================================== */
+.formRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.formGroup.half {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.formGroup.third {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ========================================
+   提交按钮区域
+   ======================================== */
+.formSubmit {
+  margin-top: 32px;
+}
+
+.submitContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitBtn {
+  background: #1890ff;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #096dd9, #1890ff);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.submitBtn:disabled {
+  background: #a3c5e8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 轮询相关样式 */
+.pollingIndicator {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  font-size: 14px;
+  color: #1890ff;
+}
+
+.loadingSpinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(24, 144, 255, 0.2);
+  border-radius: 50%;
+  border-top-color: #1890ff;
+  animation: spin 1s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.remaining-time, .polling-status {
+  font-size: 14px;
+  color: #1890ff;
+  white-space: nowrap;
+}
+
+/* ========================================
+   结果页面样式
+   ======================================== */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px;
+}
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px;
+  font-size: 18px;
+  color: #ff4d4f;
+}
+
+.resultContainer {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.resultSection {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.resultContent {
+  margin-top: 20px;
+}
+
+.successMessage {
+  background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 100%);
+  border-left: 4px solid #1890ff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.successMessage h2 {
+  color: #1890ff;
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+.successMessage p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+.parametersSection {
+  margin-top: 30px;
+}
+
+.parametersList {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.parameterItem {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.parameterItem:last-child {
+  border-bottom: none;
+}
+
+.paramLabel {
+  font-weight: 600;
+  color: #333;
+  min-width: 220px;
+  flex-shrink: 0;
+}
+
+.paramValue {
+  color: #666;
+  word-break: break-all;
+}
+
+.placeholderSection {
+  margin-top: 40px;
+  padding: 60px 20px;
+  background: #f9f9f9;
+  border: 2px dashed #d9d9d9;
+  border-radius: 8px;
+  text-align: center;
+}

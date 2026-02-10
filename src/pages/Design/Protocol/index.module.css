@@ -1,0 +1,318 @@
+/* ========================================
+   质粒列表页面样式 - 绿色主题
+   ======================================== */
+.plasmidsContainer {
+  padding: 40px 60px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/* 标题区域 */
+.plasmidsHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.plasmidsHeader h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #52c41a, transparent);
+  border: none;
+  margin-bottom: 40px;
+}
+
+/* 内容区域布局 */
+.plasmidsContent {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+}
+
+/* 左侧边栏 */
+.plasmidsSidebar {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.sidebarSticky {
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+  border: 1px solid #e8f5e9;
+  border-radius: 20px;
+  padding: 24px;
+  background: linear-gradient(135deg, #f0f9f0 0%, #e8f5e9 100%);
+  box-shadow: 0 4px 12px rgba(82, 196, 26, 0.1);
+}
+
+.sidebarSticky h3 {
+  font-size: 1.3rem;
+  color: #237804;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #52c41a;
+  font-weight: 600;
+}
+
+/* Anchor 组件样式覆盖 */
+.sidebarSticky :global(.ant-anchor) {
+  padding: 0;
+}
+
+.sidebarSticky :global(.ant-anchor-link) {
+  padding: 8px 0;
+  border-bottom: 1px solid #d9f7be;
+}
+
+.sidebarSticky :global(.ant-anchor-link:last-child) {
+  border-bottom: none;
+}
+
+.sidebarSticky :global(.ant-anchor-link-title) {
+  color: #389e0d;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  display: block;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.sidebarSticky :global(.ant-anchor-link-title:hover) {
+  color: #52c41a;
+  background-color: rgba(82, 196, 26, 0.08);
+  transform: translateX(4px);
+}
+
+.sidebarSticky :global(.ant-anchor-link-active > .ant-anchor-link-title) {
+  color: #52c41a;
+  font-weight: 600;
+  background-color: rgba(82, 196, 26, 0.12);
+}
+
+.sidebarSticky :global(.ant-anchor-ink) {
+  display: none;
+}
+
+/* 右侧卡片网格布局 */
+.plasmidsGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-content: start;
+}
+
+/* 质粒卡片 */
+.plasmidCard {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #f0f0f0;
+  background-color: #ffffff;
+}
+
+.plasmidCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(82, 196, 26, 0.15);
+  border-color: #b7eb8f;
+}
+
+.plasmidCard :global(.ant-card-body) {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* 图片区域 */
+.cardImageWrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.plasmidCard:hover .cardImage {
+  transform: scale(1.05);
+}
+
+/* 卡片内容 */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 12px 0;
+  line-height: 1.4;
+}
+
+.cardDescription {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
+/* Read More 按钮 */
+.readMoreBtn {
+  width: 40%;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: auto;
+  background-color: #52c41a;
+  border-color: #52c41a;
+  transition: all 0.3s ease;
+}
+
+.readMoreBtn:hover {
+  background-color: #73d13d !important;
+  border-color: #73d13d !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(82, 196, 26, 0.3);
+}
+
+.readMoreBtn:active {
+  transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 1400px) {
+  .plasmidsContent {
+    width: 95%;
+  }
+  
+  .plasmidsSidebar {
+    width: 240px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .plasmidsGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  
+  .plasmidsSidebar {
+    width: 220px;
+  }
+}
+
+@media (max-width: 968px) {
+  .plasmidsContainer {
+    padding: 30px 20px;
+  }
+  
+  .plasmidsContent {
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .plasmidsSidebar {
+    width: 100%;
+  }
+  
+  .sidebarSticky {
+    position: static;
+    margin-bottom: 20px;
+  }
+  
+  .plasmidsHeader h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .plasmidsContainer {
+    padding: 20px 15px;
+  }
+  
+  .plasmidsHeader h1 {
+    font-size: 1.8rem;
+  }
+  
+  .plasmidsGrid {
+    gap: 20px;
+  }
+  
+  .cardImageWrapper {
+    height: 200px;
+  }
+  
+  .sidebarSticky {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plasmidsHeader h1 {
+    font-size: 1.5rem;
+  }
+  
+  .cardTitle {
+    font-size: 18px;
+  }
+  
+  .cardDescription {
+    font-size: 13px;
+  }
+  
+  .sidebarSticky h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 卡片标题中的 Badge 样式优化 */
+.cardTitle :global(.ant-badge) {
+  vertical-align: middle;
+}
+
+.cardTitle :global(.ant-badge-count) {
+  box-shadow: 0 2px 8px rgba(82, 196, 26, 0.3);
+}

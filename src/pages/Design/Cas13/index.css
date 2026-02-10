@@ -1,0 +1,272 @@
+/* ========================================
+   整体页面容器
+   ======================================== */
+.cas13-container {
+  padding: 60px 40px 20px 40px;
+}
+
+/* ========================================
+   上部分：图文介绍区域
+   ======================================== */
+.cas13-header {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.cas13-image img {
+  width: 45vw;
+  height: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.cas13-intro {
+  width: 40vw;
+  background-color: #f7fcfb;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.cas13-intro h1 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cas13-intro p {
+  font-size: 1.2vw;
+  line-height: 1.3;
+  color: #333;
+  text-indent: 1em;
+  font-weight: 500;
+}
+
+.cas13-intro h2 {
+  font-size: 1.4vw;
+}
+
+.cas13-intro ul {
+  margin-left: 1em;
+  font-size: 1.1vw;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* ========================================
+   下部分：表单区域
+   ======================================== */
+.cas13-form {
+  margin: 0 40px;
+  background: #fbfafb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+}
+
+.cas13-form form {
+  max-width: 100%;
+}
+
+/* ========================================
+   表单基础样式
+   ======================================== */
+.cas13-form .form-group {
+  margin-bottom: 24px;
+}
+
+.cas13-form .form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.cas13-form .required {
+  color: #ff4d4f;
+  margin-right: 4px;
+}
+
+.cas13-form .help-icon {
+  color: #1890ff;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.cas13-form .help-link {
+  color: #1890ff;
+  font-size: 14px;
+  margin-left: 8px;
+  text-decoration: none;
+}
+
+.cas13-form .help-link:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   示例按钮区域
+   ======================================== */
+.cas13-form .example-section {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.cas13-form .example-label {
+  color: #1890ff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cas13-form .example-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  background-color: #1890ff;
+}
+
+.cas13-form .example-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background-color: #40a9ff;
+}
+
+.cas13-form .example-btn.selected {
+  background-color: #52c41a;
+}
+
+.cas13-form .example-btn.selected:hover {
+  background-color: #73d13d;
+}
+
+.cas13-form .example-btn.clear {
+  background-color: #ff7875;
+  margin-left: 20px;
+}
+
+.cas13-form .example-btn.clear:hover {
+  background-color: #ff4d4f;
+}
+
+/* ========================================
+   表单布局
+   ======================================== */
+.cas13-form .form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.cas13-form .form-row .form-group.half {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* ========================================
+   提交按钮区域
+   ======================================== */
+.cas13-form .form-submit {
+  margin-top: 32px;
+}
+
+.cas13-form .submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cas13-form .submit-btn {
+  background: #1890ff;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.cas13-form .submit-btn:hover {
+  background: linear-gradient(135deg, #096dd9, #1890ff);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+.cas13-form .submit-btn:active {
+  transform: translateY(0);
+}
+
+.cas13-form .submit-btn:disabled {
+  background: #a3c5e8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ========================================
+   响应式设计
+   ======================================== */
+@media screen and (max-width: 768px) {
+  .cas13-container {
+    padding: 40px 20px 20px 20px;
+  }
+
+  .cas13-intro h1 {
+    font-size: 22px;
+  }
+  .cas13-intro p {
+    font-size: 16px;
+  }
+  .cas13-intro h2 {
+    font-size: 16px;
+  }
+  .cas13-intro ul {
+    font-size: 14px;
+  }
+
+  .cas13-form {
+    margin: 0 20px;
+    padding: 20px;
+  }
+
+  .cas13-form .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cas13-form .form-row .form-group.half {
+    margin-bottom: 24px;
+  }
+
+  .cas13-form .example-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .cas13-form .submit-btn {
+    padding: 10px 32px;
+    font-size: 14px;
+  }
+}

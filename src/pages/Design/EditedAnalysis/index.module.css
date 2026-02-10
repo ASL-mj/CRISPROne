@@ -1,0 +1,800 @@
+/* ========================================
+   整体页面容器
+   ======================================== */
+.editingAnalysisContainer {
+  padding: 60px 40px 20px 40px;
+}
+
+/* ========================================
+   上部分：图文介绍区域
+   ======================================== */
+.editingAnalysisHeader {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 60px;
+  gap: 20px;
+}
+
+.editingAnalysisImage img {
+  width: 45vw;
+  height: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.editingAnalysisIntro {
+  width: 40vw;
+  background-color: #f7fcfb;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.editingAnalysisIntro h1 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.editingAnalysisIntro p {
+  font-size: 1.2vw;
+  line-height: 1.3;
+  color: #333;
+  text-indent: 1em;
+  font-weight: 500;
+}
+
+.editingAnalysisIntro h2 {
+  font-size: 1.4vw;
+}
+
+.editingAnalysisIntro ol {
+  margin-left: 1em;
+  font-size: 1.1vw;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* ========================================
+   下部分：表单
+   ======================================== */
+.editingAnalysisFormTitle {
+  text-align: center;
+}
+
+.editingAnalysisFormTitle h2 {
+  background-color: #a8e695;
+  display: inline-block;
+  width: auto;
+  padding: 10px 30px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+}
+
+.editingAnalysisForm {
+  text-align: center;
+  margin: 0 40px;
+  background: #fbfafb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+}
+
+.editingFormRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.editingFormGroup {
+  width: 40%;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* ========================================
+   提交按钮区域
+   ======================================== */
+.formSubmit {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.submitBtn {
+  background: #1890ff;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.3);
+}
+
+.submitBtn:hover {
+  background: linear-gradient(135deg, #096dd9, #1890ff);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   分析结果区域
+   ======================================== */
+.analysisResultsContainer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.analysisResultsContainer h3 {
+  font-size: 20px;
+  color: #1890ff;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6f7ff;
+}
+
+.resultsFilesSection, 
+.downloadPackageSection {
+  margin-bottom: 25px;
+}
+
+.resultsFilesSection h4,
+.downloadPackageSection h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.resultsFilesHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.resultsFilesTools {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.fileSearchInput {
+  width: 200px;
+}
+
+.resultsFilesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.resultFileItem {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.2s ease;
+  width: calc(33.33% - 8px);
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .resultFileItem {
+    width: calc(50% - 6px);
+  }
+}
+
+@media (max-width: 768px) {
+  .resultFileItem {
+    width: 100%;
+  }
+}
+
+.resultFileItem:hover {
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.fileIcon {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fileIconSymbol {
+  font-size: 20px;
+  color: #1890ff;
+}
+
+.fileLink {
+  color: #1890ff;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileLink:hover {
+  text-decoration: underline;
+}
+
+.resultsPagination {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.noFilesFound {
+  margin: 30px 0;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: #52c41a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.downloadButton:hover {
+  background-color: #389e0d;
+  box-shadow: 0 2px 8px rgba(82, 196, 26, 0.3);
+}
+
+.downloadIcon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* ========================================
+   任务状态区域
+   ======================================== */
+.taskStatusContainer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.taskStatusHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6f7ff;
+}
+
+.taskStatusHeader h3 {
+  font-size: 20px;
+  color: #1890ff;
+  margin: 0;
+}
+
+.taskHistorySelect {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.taskHistorySelect span {
+  font-size: 14px;
+  color: #666;
+}
+
+.taskStatusContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.taskStatusIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.statusIcon {
+  font-size: 24px;
+}
+
+.statusIcon.completed,
+.completed {
+  color: #52c41a;
+}
+
+.statusIcon.partial,
+.partial {
+  color: #faad14;
+}
+
+.statusIcon.running,
+.running {
+  color: #1890ff;
+}
+
+.statusIcon.failed,
+.failed {
+  color: #f5222d;
+}
+
+.taskError,
+.taskPartialErrors {
+  margin-top: 15px;
+  background-color: #fff2f0;
+  padding: 10px 15px;
+  border-radius: 6px;
+  border-left: 3px solid #ff4d4f;
+}
+
+.taskPartialErrors {
+  background-color: #fffbe6;
+  border-left-color: #faad14;
+}
+
+.errorTitle {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.errorMessage,
+.partialErrorItem {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+.partialErrorItem .fileName {
+  font-weight: 500;
+}
+
+.taskStep,
+.taskTime,
+.taskCompletionTime {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.taskStatusInfo {
+  flex: 1;
+}
+
+.taskId,
+.taskStatus {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.taskProgress {
+  margin-top: 12px;
+}
+
+/* ========================================
+   历史任务列表
+   ======================================== */
+.historyTasksContainer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.historyTasksContainer h3 {
+  font-size: 20px;
+  color: #1890ff;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6f7ff;
+}
+
+.historyTasksList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.historyTaskItem {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.historyTaskItem:hover {
+  box-shadow: 0 2px 8px rgba(24, 144, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.historyTaskItem.active {
+  border-color: #1890ff;
+  background-color: #e6f7ff;
+}
+
+.historyTaskIcon {
+  font-size: 24px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+
+.historyTaskInfo {
+  flex: 1;
+}
+
+.historyTaskId {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.historyTaskTime,
+.historyTaskStatus,
+.historyTaskFiles {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 3px;
+}
+
+/* ========================================
+   Off-Target 页面样式
+   ======================================== */
+.offTargetBody {
+  margin-top: 40px;
+}
+
+.offTargetSection {
+  margin-bottom: 50px;
+}
+
+/* 绿色按钮样式 */
+.sectionButton {
+  background-color: #52c41a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(82, 196, 26, 0.3);
+}
+
+.sectionButton:hover {
+  background-color: #389e0d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(82, 196, 26, 0.4);
+}
+
+.sectionButton:active {
+  transform: translateY(0);
+}
+
+/* 内容包装器 */
+.contentWrapper {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* 图片容器 */
+.imageContainer {
+  flex: 1;
+  min-width: 300px;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 文本内容 */
+.textContent {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.textContent h2 {
+  font-size: 20px;
+  color: #1890ff;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6f7ff;
+}
+
+.textContent p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: justify;
+  text-indent: 2em;
+}
+
+/* How to identify 部分 */
+.howToIdentifyContent {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+}
+
+.stepsContainer {
+  margin-bottom: 30px;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.stepNumber {
+  background-color: #1890ff;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.step p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  flex: 1;
+}
+
+/* 命令行容器 */
+.commandContainer {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.commandLine {
+  color: #d4d4d4;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-all;
+  display: block;
+  margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .textContent {
+    padding-left: 0;
+  }
+  
+  .imageContainer {
+    min-width: auto;
+  }
+  
+  .step {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .stepNumber {
+    align-self: flex-start;
+  }
+}
+
+/* ========================================
+   Barcode 表单样式
+   ======================================== */
+.barcodeFormContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(246, 252, 251, 1);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.barcodeFormRow {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.barcodeFormColumn {
+  flex: 1;
+}
+
+.barcodeColumnHeader {
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.barcodeColumnHeader span {
+  font-size: 30px;
+  font-weight: 500;
+  color: #555;
+}
+
+.barcodeRequiredText::after {
+  content: " *";
+}
+
+.barcodeFormGroup {
+  position: relative;
+  margin: 20px 0;
+}
+
+.barcodeFormControl {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.barcodeFormControl:focus {
+  outline: none;
+  border-color: #26397A;
+}
+
+.barcodeFormControl::placeholder {
+  color: transparent;
+}
+
+.barcodeFormControl:focus::placeholder {
+  color: #999;
+}
+
+.barcodeFormLabel {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #666;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: white;
+  padding: 0 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+
+.barcodeFormLabel:hover {
+  overflow: visible;
+  z-index: 1;
+}
+
+.barcodeFormControl:focus + .barcodeFormLabel,
+.barcodeFormControl:not(:placeholder-shown) + .barcodeFormLabel {
+  top: 0;
+  font-size: 12px;
+  color: #26397A;
+}
+
+.barcodeCheckboxGroup {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.barcodeFormCheckbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.barcodeCheckboxGroup label {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.barcodeSubmitGroup {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.barcodeSubmitButton {
+  width: 400px;
+  height: 40px;
+  background: #26397A;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.barcodeSubmitButton:hover {
+  background: #1a2754;
+}
+
+.barcodeFormContent {
+  width: 100%;
+  margin: 20px auto 40px auto;
+  background-color: rgba(246,246,246,1);
+  border-left: 5px solid rgba(22,43,240,0.46);
+  padding: 10px 10px;
+}

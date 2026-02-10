@@ -1,0 +1,238 @@
+.intro-section {
+  width: 100%;
+  margin-top: 100px;
+}
+
+.cards-section {
+  margin: 100px 0;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  /* 左图右文模块在移动端改为垂直布局 */
+  .intro-section {
+    flex-direction: column !important;
+    gap: 30px !important;
+    text-align: center;
+  }
+
+  .intro-image {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+
+  .intro-text {
+    width: 100% !important;
+    text-align: left;
+  }
+
+  /* 卡片在移动端改为垂直布局 */
+  .cards-section {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .card {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 300px !important;
+  }
+
+  .intro-section,
+  .cards-section {
+    padding: 0 15px !important;
+  }
+}
+
+/* 交互式定位点样式 */
+.point {
+  z-index: 10;
+  position: relative;
+}
+
+/* 脉冲圆点样式 */
+.point .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #4caf50, #67ad5b);
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+  position: relative;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+/* 脉冲动画 */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(76, 175, 80, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+  }
+}
+
+/* 圆点悬停效果 */
+.point:hover .circle {
+  transform: scale(1.2);
+  background: linear-gradient(45deg, #45a049, #5d9c52);
+  box-shadow: 0 0 30px rgba(76, 175, 80, 1);
+}
+
+/* 标签文字样式 */
+.point-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  padding: 4px 8px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* 悬停时显示标签 */
+.point:hover .point-label {
+  opacity: 1;
+}
+
+/* banner-text 样式 - 直接复制自project_crispr */
+.banner-text {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  transform: translateY(-50%);
+  width: 30%;
+  padding: 2vw;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 2vw;
+}
+
+.main-title {
+  font-size: 3.5vw;
+  font-weight: 800;
+  margin-bottom: 1vw;
+  background: linear-gradient(45deg, #2193b0, #6dd5ed);
+  background-clip: text;
+  color: rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  animation: titleFadeIn 1s ease-out forwards;
+}
+
+.main-title::after {
+  content: "";
+  display: block;
+  width: 8vw;
+  height: 0.2vw;
+  background: linear-gradient(45deg, #2193b0, #6dd5ed);
+  margin-top: 10px;
+  border-radius: 2px;
+  animation: lineExtend 1.2s ease-out forwards;
+}
+
+.sub-title {
+  font-size: 1.7vw;
+  line-height: 1.4;
+  color: #333;
+  font-weight: 500;
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: subtitleFadeIn 1s ease-out 0.5s forwards;
+}
+
+/* 动画定义 - 复制自project_crispr */
+@keyframes titleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lineExtend {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100px;
+  }
+}
+
+@keyframes subtitleFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式调整定位点 */
+@media (max-width: 768px) {
+  .point .circle {
+    width: 16px;
+    height: 16px;
+  }
+
+  .point-label {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+
+  .banner-text {
+    display: none;
+  }
+
+  .main-title {
+    font-size: 6vw;
+  }
+
+  .sub-title {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .point .circle {
+    width: 14px;
+    height: 14px;
+  }
+
+  .point-label {
+    font-size: 9px;
+    padding: 2px 4px;
+  }
+
+  .main-title {
+    font-size: 8vw;
+  }
+
+  .sub-title {
+    font-size: 4vw;
+  }
+}

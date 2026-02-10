@@ -1,0 +1,105 @@
+/* 导航栏整体 */
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  gap: 20px;
+  background-color: #fff;
+}
+/* 导航栏logo和标题样式 */
+.navigation-logo {
+  display: flex;
+  align-items: center;
+}
+.navigation-logo img {
+  width: 100px;
+  cursor: pointer;
+}
+.navigation-logo span {
+  font-size: 20px;
+  font-weight: 500;
+}
+/* 导航栏社交媒体部分样式 */
+.navigation-social {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.head-social-media-title {
+  background-color: #f1faf8;
+  padding: 5px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 35px;
+}
+.head-social-media-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.head-social-media-list li a {
+  color: black;
+  font-size: 24px;
+}
+/* 菜单栏样式 */
+.navigation-menu-container {
+  background-color: #e1ece8;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+/* 移动端菜单按钮 - 默认隐藏 */
+.mobile-nav-button {
+  display: none;
+}
+
+/* 响应式切换 */
+@media (max-width: 768px) {
+  /* 移动端：隐藏PC菜单，显示菜单按钮 */
+  .desktop-nav {
+    display: none !important;
+  }
+
+  .mobile-nav-button {
+    display: block !important;
+  }
+
+  .navigation-menu-container {
+    justify-content: flex-end;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 769px) {
+  /* PC端：显示PC菜单，隐藏菜单按钮 */
+  .desktop-nav {
+    display: block !important;
+  }
+
+  .mobile-nav-button {
+    display: none !important;
+  }
+}
+
+/* DNA图标样式 */
+.ant-menu .ant-menu-item-icon img,
+.ant-menu .ant-menu-submenu-title .ant-menu-item-icon img {
+  filter: brightness(0) saturate(100%);
+  transition: filter 0.3s ease;
+}
+
+.ant-menu .ant-menu-item:hover .ant-menu-item-icon img,
+.ant-menu .ant-menu-item-selected .ant-menu-item-icon img,
+.ant-menu
+  .ant-menu-submenu:hover
+  .ant-menu-submenu-title
+  .ant-menu-item-icon
+  img {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(98%) saturate(1291%)
+    hue-rotate(202deg) brightness(95%) contrast(87%);
+}

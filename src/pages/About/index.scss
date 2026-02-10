@@ -1,0 +1,421 @@
+// News 组件样式
+.news {
+  background-color: white;
+  padding: 40px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .timeline {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding-left: 50px;
+    border-left: 2px solid #e6e6e6;
+    position: relative;
+    list-style: none;
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      padding-left: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: -59px;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #4caf50;
+        border: 4px solid #fff;
+        box-shadow: 0 0 0 2px #4caf50;
+      }
+
+      h5 {
+        font-size: 1.25rem;
+        color: #333;
+        margin: 0 0 10px;
+        font-weight: 600;
+        line-height: 1.4;
+      }
+
+      .date {
+        font-size: 0.95rem;
+        color: #666;
+        margin: 0 0 15px;
+        font-weight: 500;
+      }
+
+      .description {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        margin: 0;
+        padding-bottom: 20px;
+      }
+
+      &:hover {
+        &:after {
+          background-color: #fff;
+          border-color: #4caf50;
+          transform: scale(1.2);
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .timeline {
+      padding-left: 30px;
+
+      .timeline-item {
+        padding-left: 20px;
+
+        &:after {
+          left: -39px;
+        }
+      }
+    }
+  }
+}
+
+// ContactUs 组件样式
+.contact-us {
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .contact-form {
+    border: 1px solid #e1e5e9;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+
+    .form-row {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 20px;
+
+      .form-group {
+        flex: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+
+      .form-label {
+        display: flex;
+        width: 150px;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #555;
+        font-size: 14px;
+
+        img {
+          opacity: 0.7;
+        }
+      }
+
+      .submit-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 200px;
+        margin: 0 auto;
+
+        &:hover {
+          background-color: #45a049;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  // 地图部分样式
+  .map-section {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+
+    h2 {
+      color: #333;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .map-container {
+      .baidu-map {
+        width: 100%;
+        height: 400px;
+        border: 2px solid #e1e5e9;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+
+        // 加载状态居中
+        .ant-spin {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  // 响应式设计
+  @media (max-width: 768px) {
+    padding: 20px 15px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .contact-form {
+      .form-row {
+        flex-direction: column;
+        gap: 0;
+
+        .form-group {
+          margin-bottom: 20px;
+        }
+      }
+
+      .form-group {
+        .form-input,
+        .form-textarea {
+          padding: 10px 12px;
+          font-size: 14px;
+        }
+
+        .submit-btn {
+          padding: 12px 24px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .map-section {
+      margin-top: 30px;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .map-container .baidu-map {
+        height: 300px;
+      }
+    }
+  }
+}
+
+// Help 组件样式
+.help {
+  scroll-behavior: smooth;
+  background-color: white;
+  padding: 40px;
+  margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+
+  .help-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+
+    .help-sidebar {
+      width: 23%;
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+      border: 1px solid #e1e5e9;
+      border-radius: 20px;
+      padding: 20px;
+      background-color: #f4f7fe;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+      .search-container {
+        margin-bottom: 20px;
+
+        .search-input {
+          width: 100%;
+          padding: 10px 15px;
+          border: 1px solid #e1e5e9;
+          border-radius: 8px;
+          font-size: 14px;
+          outline: none;
+          transition: all 0.3s ease;
+
+          &:focus {
+            border-color: #4caf50;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+          }
+
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        color: #222223;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #4caf50;
+      }
+
+      .help-sidebar-list {
+        .sidebar-item {
+          padding: 8px 0;
+          border-bottom: 1px solid #eee;
+
+          a {
+            color: #246bf7;
+            text-decoration: none;
+            display: block;
+            font-size: 15px;
+            transition: all 0.2s ease;
+
+            &:hover {
+              color: #4caf50;
+            }
+          }
+        }
+      }
+    }
+
+    .help-main {
+      flex: 1;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      border: 1px solid #e1e5e9;
+      padding: 20px;
+      background-color: #f4f7fe;
+
+      .help-item {
+        margin-bottom: 5px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &:hover {
+          hr {
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            width: 150px;
+          }
+        }
+
+        h2 {
+          font-size: 1.6rem;
+          color: #333;
+          margin-bottom: 15px;
+        }
+
+        p {
+          background-color: #fffefe;
+          padding: 10px;
+          font-size: 1.1rem;
+          text-indent: 2em;
+        }
+
+        hr {
+          border: none;
+          height: 2px;
+          background-color: #4caf50;
+          margin-bottom: 15px;
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    .help-content {
+      width: 100%;
+      flex-direction: column;
+
+      .help-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+// 添加简单平滑滚动到html元素
+html {
+  scroll-behavior: smooth;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #4caf50, transparent);
+  border: none;
+  margin-bottom: 40px;
+}
